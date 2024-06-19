@@ -15,9 +15,9 @@ _$UsersResponseObjectImpl _$$UsersResponseObjectImplFromJson(
       birthday: json['birthday'] as String,
       lastName: json['lastName'] as String,
       position: json['position'] as String,
-      productId: json['avatarUrl'] as String,
+      avatarUrl: json['avatarUrl'] as String,
       firstName: json['firstName'] as String,
-      notificationURL: json['department'] as String,
+      department: json['department'] as String,
     );
 
 Map<String, dynamic> _$$UsersResponseObjectImplToJson(
@@ -29,7 +29,7 @@ Map<String, dynamic> _$$UsersResponseObjectImplToJson(
       'birthday': instance.birthday,
       'lastName': instance.lastName,
       'position': instance.position,
-      'avatarUrl': instance.productId,
+      'avatarUrl': instance.avatarUrl,
       'firstName': instance.firstName,
-      'department': instance.notificationURL,
+      'department': instance.department,
     };

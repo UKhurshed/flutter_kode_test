@@ -9,7 +9,5 @@ abstract class UsersService extends ChopperService {
   static UsersService create([ChopperClient? client]) => _$UsersService(client);
 
   @Get()
-  Future<Response<UsersResponse>> getUsers(
-    @Body() UsersRequest request,
-  );
+  Future<Response<UsersResponse>> getUsers();
 }

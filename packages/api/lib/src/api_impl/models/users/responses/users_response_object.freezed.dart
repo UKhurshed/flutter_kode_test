@@ -33,11 +33,11 @@ mixin _$UsersResponseObject {
   @JsonKey(name: 'position')
   String get position => throw _privateConstructorUsedError;
   @JsonKey(name: 'avatarUrl')
-  String get productId => throw _privateConstructorUsedError;
+  String get avatarUrl => throw _privateConstructorUsedError;
   @JsonKey(name: 'firstName')
   String get firstName => throw _privateConstructorUsedError;
   @JsonKey(name: 'department')
-  String get notificationURL => throw _privateConstructorUsedError;
+  String get department => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -58,9 +58,9 @@ abstract class $UsersResponseObjectCopyWith<$Res> {
       @JsonKey(name: 'birthday') String birthday,
       @JsonKey(name: 'lastName') String lastName,
       @JsonKey(name: 'position') String position,
-      @JsonKey(name: 'avatarUrl') String productId,
+      @JsonKey(name: 'avatarUrl') String avatarUrl,
       @JsonKey(name: 'firstName') String firstName,
-      @JsonKey(name: 'department') String notificationURL});
+      @JsonKey(name: 'department') String department});
 }
 
 /// @nodoc
@@ -82,9 +82,9 @@ class _$UsersResponseObjectCopyWithImpl<$Res, $Val extends UsersResponseObject>
     Object? birthday = null,
     Object? lastName = null,
     Object? position = null,
-    Object? productId = null,
+    Object? avatarUrl = null,
     Object? firstName = null,
-    Object? notificationURL = null,
+    Object? department = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -111,17 +111,17 @@ class _$UsersResponseObjectCopyWithImpl<$Res, $Val extends UsersResponseObject>
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
               as String,
-      productId: null == productId
-          ? _value.productId
-          : productId // ignore: cast_nullable_to_non_nullable
+      avatarUrl: null == avatarUrl
+          ? _value.avatarUrl
+          : avatarUrl // ignore: cast_nullable_to_non_nullable
               as String,
       firstName: null == firstName
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
               as String,
-      notificationURL: null == notificationURL
-          ? _value.notificationURL
-          : notificationURL // ignore: cast_nullable_to_non_nullable
+      department: null == department
+          ? _value.department
+          : department // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -142,9 +142,9 @@ abstract class _$$UsersResponseObjectImplCopyWith<$Res>
       @JsonKey(name: 'birthday') String birthday,
       @JsonKey(name: 'lastName') String lastName,
       @JsonKey(name: 'position') String position,
-      @JsonKey(name: 'avatarUrl') String productId,
+      @JsonKey(name: 'avatarUrl') String avatarUrl,
       @JsonKey(name: 'firstName') String firstName,
-      @JsonKey(name: 'department') String notificationURL});
+      @JsonKey(name: 'department') String department});
 }
 
 /// @nodoc
@@ -164,9 +164,9 @@ class __$$UsersResponseObjectImplCopyWithImpl<$Res>
     Object? birthday = null,
     Object? lastName = null,
     Object? position = null,
-    Object? productId = null,
+    Object? avatarUrl = null,
     Object? firstName = null,
-    Object? notificationURL = null,
+    Object? department = null,
   }) {
     return _then(_$UsersResponseObjectImpl(
       id: null == id
@@ -193,17 +193,17 @@ class __$$UsersResponseObjectImplCopyWithImpl<$Res>
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
               as String,
-      productId: null == productId
-          ? _value.productId
-          : productId // ignore: cast_nullable_to_non_nullable
+      avatarUrl: null == avatarUrl
+          ? _value.avatarUrl
+          : avatarUrl // ignore: cast_nullable_to_non_nullable
               as String,
       firstName: null == firstName
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
               as String,
-      notificationURL: null == notificationURL
-          ? _value.notificationURL
-          : notificationURL // ignore: cast_nullable_to_non_nullable
+      department: null == department
+          ? _value.department
+          : department // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -219,9 +219,9 @@ class _$UsersResponseObjectImpl implements _UsersResponseObject {
       @JsonKey(name: 'birthday') required this.birthday,
       @JsonKey(name: 'lastName') required this.lastName,
       @JsonKey(name: 'position') required this.position,
-      @JsonKey(name: 'avatarUrl') required this.productId,
+      @JsonKey(name: 'avatarUrl') required this.avatarUrl,
       @JsonKey(name: 'firstName') required this.firstName,
-      @JsonKey(name: 'department') required this.notificationURL});
+      @JsonKey(name: 'department') required this.department});
 
   factory _$UsersResponseObjectImpl.fromJson(Map<String, dynamic> json) =>
       _$$UsersResponseObjectImplFromJson(json);
@@ -246,17 +246,17 @@ class _$UsersResponseObjectImpl implements _UsersResponseObject {
   final String position;
   @override
   @JsonKey(name: 'avatarUrl')
-  final String productId;
+  final String avatarUrl;
   @override
   @JsonKey(name: 'firstName')
   final String firstName;
   @override
   @JsonKey(name: 'department')
-  final String notificationURL;
+  final String department;
 
   @override
   String toString() {
-    return 'UsersResponseObject(id: $id, phone: $phone, userTag: $userTag, birthday: $birthday, lastName: $lastName, position: $position, productId: $productId, firstName: $firstName, notificationURL: $notificationURL)';
+    return 'UsersResponseObject(id: $id, phone: $phone, userTag: $userTag, birthday: $birthday, lastName: $lastName, position: $position, avatarUrl: $avatarUrl, firstName: $firstName, department: $department)';
   }
 
   @override
@@ -273,18 +273,18 @@ class _$UsersResponseObjectImpl implements _UsersResponseObject {
                 other.lastName == lastName) &&
             (identical(other.position, position) ||
                 other.position == position) &&
-            (identical(other.productId, productId) ||
-                other.productId == productId) &&
+            (identical(other.avatarUrl, avatarUrl) ||
+                other.avatarUrl == avatarUrl) &&
             (identical(other.firstName, firstName) ||
                 other.firstName == firstName) &&
-            (identical(other.notificationURL, notificationURL) ||
-                other.notificationURL == notificationURL));
+            (identical(other.department, department) ||
+                other.department == department));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, phone, userTag, birthday,
-      lastName, position, productId, firstName, notificationURL);
+      lastName, position, avatarUrl, firstName, department);
 
   @JsonKey(ignore: true)
   @override
@@ -309,9 +309,9 @@ abstract class _UsersResponseObject implements UsersResponseObject {
           @JsonKey(name: 'birthday') required final String birthday,
           @JsonKey(name: 'lastName') required final String lastName,
           @JsonKey(name: 'position') required final String position,
-          @JsonKey(name: 'avatarUrl') required final String productId,
+          @JsonKey(name: 'avatarUrl') required final String avatarUrl,
           @JsonKey(name: 'firstName') required final String firstName,
-          @JsonKey(name: 'department') required final String notificationURL}) =
+          @JsonKey(name: 'department') required final String department}) =
       _$UsersResponseObjectImpl;
 
   factory _UsersResponseObject.fromJson(Map<String, dynamic> json) =
@@ -337,13 +337,13 @@ abstract class _UsersResponseObject implements UsersResponseObject {
   String get position;
   @override
   @JsonKey(name: 'avatarUrl')
-  String get productId;
+  String get avatarUrl;
   @override
   @JsonKey(name: 'firstName')
   String get firstName;
   @override
   @JsonKey(name: 'department')
-  String get notificationURL;
+  String get department;
   @override
   @JsonKey(ignore: true)
   _$$UsersResponseObjectImplCopyWith<_$UsersResponseObjectImpl> get copyWith =>

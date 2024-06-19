@@ -12,9 +12,9 @@ class UsersResponseObject with _$UsersResponseObject {
     @JsonKey(name: 'birthday') required String birthday,
     @JsonKey(name: 'lastName') required String lastName,
     @JsonKey(name: 'position') required String position,
-    @JsonKey(name: 'avatarUrl') required String productId,
+    @JsonKey(name: 'avatarUrl') required String avatarUrl,
     @JsonKey(name: 'firstName') required String firstName,
-    @JsonKey(name: 'department') required String notificationURL,
+    @JsonKey(name: 'department') required String department,
   }) = _UsersResponseObject;
 
   factory UsersResponseObject.fromJson(Map<String, dynamic> json) =>

@@ -8,7 +8,9 @@ part of 'users_response.dart';
 
 _$UsersResponseImpl _$$UsersResponseImplFromJson(Map<String, dynamic> json) =>
     _$UsersResponseImpl(
-      data: UsersResponseObject.fromJson(json['items'] as Map<String, dynamic>),
+      data: (json['items'] as List<dynamic>)
+          .map((e) => UsersResponseObject.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$UsersResponseImplToJson(_$UsersResponseImpl instance) =>

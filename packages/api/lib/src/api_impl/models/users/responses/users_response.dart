@@ -8,7 +8,7 @@ part 'users_response.g.dart';
 @freezed
 class UsersResponse with _$UsersResponse {
   const factory UsersResponse({
-    @JsonKey(name: 'items') required UsersResponseObject data,
+    @JsonKey(name: 'items') required List<UsersResponseObject> data,
   }) = _UsersResponse;
 
   factory UsersResponse.fromJson(Map<String, dynamic> json) =>

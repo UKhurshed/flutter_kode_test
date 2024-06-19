@@ -21,7 +21,7 @@ UsersResponse _$UsersResponseFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$UsersResponse {
   @JsonKey(name: 'items')
-  UsersResponseObject get data => throw _privateConstructorUsedError;
+  List<UsersResponseObject> get data => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,9 +35,7 @@ abstract class $UsersResponseCopyWith<$Res> {
           UsersResponse value, $Res Function(UsersResponse) then) =
       _$UsersResponseCopyWithImpl<$Res, UsersResponse>;
   @useResult
-  $Res call({@JsonKey(name: 'items') UsersResponseObject data});
-
-  $UsersResponseObjectCopyWith<$Res> get data;
+  $Res call({@JsonKey(name: 'items') List<UsersResponseObject> data});
 }
 
 /// @nodoc
@@ -59,16 +57,8 @@ class _$UsersResponseCopyWithImpl<$Res, $Val extends UsersResponse>
       data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as UsersResponseObject,
+              as List<UsersResponseObject>,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $UsersResponseObjectCopyWith<$Res> get data {
-    return $UsersResponseObjectCopyWith<$Res>(_value.data, (value) {
-      return _then(_value.copyWith(data: value) as $Val);
-    });
   }
 }
 
@@ -80,10 +70,7 @@ abstract class _$$UsersResponseImplCopyWith<$Res>
       __$$UsersResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'items') UsersResponseObject data});
-
-  @override
-  $UsersResponseObjectCopyWith<$Res> get data;
+  $Res call({@JsonKey(name: 'items') List<UsersResponseObject> data});
 }
 
 /// @nodoc
@@ -101,9 +88,9 @@ class __$$UsersResponseImplCopyWithImpl<$Res>
   }) {
     return _then(_$UsersResponseImpl(
       data: null == data
-          ? _value.data
+          ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
-              as UsersResponseObject,
+              as List<UsersResponseObject>,
     ));
   }
 }
@@ -111,14 +98,21 @@ class __$$UsersResponseImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$UsersResponseImpl implements _UsersResponse {
-  const _$UsersResponseImpl({@JsonKey(name: 'items') required this.data});
+  const _$UsersResponseImpl(
+      {@JsonKey(name: 'items') required final List<UsersResponseObject> data})
+      : _data = data;
 
   factory _$UsersResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$UsersResponseImplFromJson(json);
 
+  final List<UsersResponseObject> _data;
   @override
   @JsonKey(name: 'items')
-  final UsersResponseObject data;
+  List<UsersResponseObject> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_data);
+  }
 
   @override
   String toString() {
@@ -130,12 +124,13 @@ class _$UsersResponseImpl implements _UsersResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UsersResponseImpl &&
-            (identical(other.data, data) || other.data == data));
+            const DeepCollectionEquality().equals(other._data, _data));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, data);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_data));
 
   @JsonKey(ignore: true)
   @override
@@ -153,15 +148,15 @@ class _$UsersResponseImpl implements _UsersResponse {
 
 abstract class _UsersResponse implements UsersResponse {
   const factory _UsersResponse(
-          {@JsonKey(name: 'items') required final UsersResponseObject data}) =
-      _$UsersResponseImpl;
+      {@JsonKey(name: 'items')
+      required final List<UsersResponseObject> data}) = _$UsersResponseImpl;
 
   factory _UsersResponse.fromJson(Map<String, dynamic> json) =
       _$UsersResponseImpl.fromJson;
 
   @override
   @JsonKey(name: 'items')
-  UsersResponseObject get data;
+  List<UsersResponseObject> get data;
   @override
   @JsonKey(ignore: true)
   _$$UsersResponseImplCopyWith<_$UsersResponseImpl> get copyWith =>

@@ -18,14 +18,12 @@ final class _$UsersService extends UsersService {
   final Type definitionType = UsersService;
 
   @override
-  Future<Response<UsersResponse>> getUsers(UsersRequest request) {
+  Future<Response<UsersResponse>> getUsers() {
     final Uri $url = Uri.parse('users');
-    final $body = request;
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      body: $body,
     );
     return client.send<UsersResponse, UsersResponse>($request);
   }
