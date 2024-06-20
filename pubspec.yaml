@@ -30,6 +30,19 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.6
+  bloc: ^8.1.4
+  freezed: ^2.4.7
+  freezed_annotation: ^2.4.1
+  equatable: ^2.0.5
+  chucker_flutter: ^1.7.2
+
+  api:
+    path: packages/api
+  domain:
+    path: packages/domain
+  repository:
+    path: packages/repository
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -39,6 +52,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner: ^2.4.4
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

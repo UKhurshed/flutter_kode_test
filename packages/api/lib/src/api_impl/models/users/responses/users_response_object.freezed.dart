@@ -25,7 +25,7 @@ mixin _$UsersResponseObject {
   @JsonKey(name: 'phone')
   String get phone => throw _privateConstructorUsedError;
   @JsonKey(name: 'userTag')
-  int get userTag => throw _privateConstructorUsedError;
+  String get userTag => throw _privateConstructorUsedError;
   @JsonKey(name: 'birthday')
   String get birthday => throw _privateConstructorUsedError;
   @JsonKey(name: 'lastName')
@@ -54,7 +54,7 @@ abstract class $UsersResponseObjectCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'id') String id,
       @JsonKey(name: 'phone') String phone,
-      @JsonKey(name: 'userTag') int userTag,
+      @JsonKey(name: 'userTag') String userTag,
       @JsonKey(name: 'birthday') String birthday,
       @JsonKey(name: 'lastName') String lastName,
       @JsonKey(name: 'position') String position,
@@ -98,7 +98,7 @@ class _$UsersResponseObjectCopyWithImpl<$Res, $Val extends UsersResponseObject>
       userTag: null == userTag
           ? _value.userTag
           : userTag // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       birthday: null == birthday
           ? _value.birthday
           : birthday // ignore: cast_nullable_to_non_nullable
@@ -138,7 +138,7 @@ abstract class _$$UsersResponseObjectImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'id') String id,
       @JsonKey(name: 'phone') String phone,
-      @JsonKey(name: 'userTag') int userTag,
+      @JsonKey(name: 'userTag') String userTag,
       @JsonKey(name: 'birthday') String birthday,
       @JsonKey(name: 'lastName') String lastName,
       @JsonKey(name: 'position') String position,
@@ -180,7 +180,7 @@ class __$$UsersResponseObjectImplCopyWithImpl<$Res>
       userTag: null == userTag
           ? _value.userTag
           : userTag // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       birthday: null == birthday
           ? _value.birthday
           : birthday // ignore: cast_nullable_to_non_nullable
@@ -234,7 +234,7 @@ class _$UsersResponseObjectImpl implements _UsersResponseObject {
   final String phone;
   @override
   @JsonKey(name: 'userTag')
-  final int userTag;
+  final String userTag;
   @override
   @JsonKey(name: 'birthday')
   final String birthday;
@@ -305,7 +305,7 @@ abstract class _UsersResponseObject implements UsersResponseObject {
   const factory _UsersResponseObject(
           {@JsonKey(name: 'id') required final String id,
           @JsonKey(name: 'phone') required final String phone,
-          @JsonKey(name: 'userTag') required final int userTag,
+          @JsonKey(name: 'userTag') required final String userTag,
           @JsonKey(name: 'birthday') required final String birthday,
           @JsonKey(name: 'lastName') required final String lastName,
           @JsonKey(name: 'position') required final String position,
@@ -325,7 +325,7 @@ abstract class _UsersResponseObject implements UsersResponseObject {
   String get phone;
   @override
   @JsonKey(name: 'userTag')
-  int get userTag;
+  String get userTag;
   @override
   @JsonKey(name: 'birthday')
   String get birthday;

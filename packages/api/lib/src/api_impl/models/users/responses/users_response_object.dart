@@ -8,7 +8,7 @@ class UsersResponseObject with _$UsersResponseObject {
   const factory UsersResponseObject({
     @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'phone') required String phone,
-    @JsonKey(name: 'userTag') required int userTag,
+    @JsonKey(name: 'userTag') required String userTag,
     @JsonKey(name: 'birthday') required String birthday,
     @JsonKey(name: 'lastName') required String lastName,
     @JsonKey(name: 'position') required String position,

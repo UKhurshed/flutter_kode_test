@@ -11,7 +11,7 @@ _$UsersResponseObjectImpl _$$UsersResponseObjectImplFromJson(
     _$UsersResponseObjectImpl(
       id: json['id'] as String,
       phone: json['phone'] as String,
-      userTag: (json['userTag'] as num).toInt(),
+      userTag: json['userTag'] as String,
       birthday: json['birthday'] as String,
       lastName: json['lastName'] as String,
       position: json['position'] as String,
