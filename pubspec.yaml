@@ -30,12 +30,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: any
   flutter_bloc: ^8.1.6
   bloc: ^8.1.4
   freezed: ^2.4.7
   freezed_annotation: ^2.4.1
   equatable: ^2.0.5
   chucker_flutter: ^1.7.2
+  cached_network_image: ^3.3.1
+  shimmer: ^3.0.0
 
   api:
     path: packages/api
@@ -66,7 +71,7 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  generate: true
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
