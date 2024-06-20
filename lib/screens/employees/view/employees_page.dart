@@ -9,6 +9,8 @@ import 'package:flutter_kode_test/utils/result/result_builder_impl.dart';
 class EmployeesPage extends StatelessWidget {
   const EmployeesPage({super.key});
 
+  static const routeName = 'employee';
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
