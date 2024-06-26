@@ -1,3 +1,4 @@
 {
-  "textFieldPlaceholder": "Введите имя, тег, почту..."
+  "textFieldPlaceholder": "Введите имя, тег, почту...",
+  "cancel": "Отмена"
 }

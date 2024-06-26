@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$GetEmployeeState {
   Result<List<Employee>> get employees => throw _privateConstructorUsedError;
+  bool get isEmptyTextField => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $GetEmployeeStateCopyWith<GetEmployeeState> get copyWith =>
@@ -29,7 +30,7 @@ abstract class $GetEmployeeStateCopyWith<$Res> {
           GetEmployeeState value, $Res Function(GetEmployeeState) then) =
       _$GetEmployeeStateCopyWithImpl<$Res, GetEmployeeState>;
   @useResult
-  $Res call({Result<List<Employee>> employees});
+  $Res call({Result<List<Employee>> employees, bool isEmptyTextField});
 }
 
 /// @nodoc
@@ -46,12 +47,17 @@ class _$GetEmployeeStateCopyWithImpl<$Res, $Val extends GetEmployeeState>
   @override
   $Res call({
     Object? employees = null,
+    Object? isEmptyTextField = null,
   }) {
     return _then(_value.copyWith(
       employees: null == employees
           ? _value.employees
           : employees // ignore: cast_nullable_to_non_nullable
               as Result<List<Employee>>,
+      isEmptyTextField: null == isEmptyTextField
+          ? _value.isEmptyTextField
+          : isEmptyTextField // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -64,7 +70,7 @@ abstract class _$$GetEmployeeStateImplCopyWith<$Res>
       __$$GetEmployeeStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Result<List<Employee>> employees});
+  $Res call({Result<List<Employee>> employees, bool isEmptyTextField});
 }
 
 /// @nodoc
@@ -79,12 +85,17 @@ class __$$GetEmployeeStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? employees = null,
+    Object? isEmptyTextField = null,
   }) {
     return _then(_$GetEmployeeStateImpl(
       employees: null == employees
           ? _value.employees
           : employees // ignore: cast_nullable_to_non_nullable
               as Result<List<Employee>>,
+      isEmptyTextField: null == isEmptyTextField
+          ? _value.isEmptyTextField
+          : isEmptyTextField // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -92,14 +103,18 @@ class __$$GetEmployeeStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$GetEmployeeStateImpl extends _GetEmployeeState {
-  const _$GetEmployeeStateImpl({required this.employees}) : super._();
+  const _$GetEmployeeStateImpl(
+      {required this.employees, required this.isEmptyTextField})
+      : super._();
 
   @override
   final Result<List<Employee>> employees;
+  @override
+  final bool isEmptyTextField;
 
   @override
   String toString() {
-    return 'GetEmployeeState._internal(employees: $employees)';
+    return 'GetEmployeeState._internal(employees: $employees, isEmptyTextField: $isEmptyTextField)';
   }
 
   @override
@@ -108,11 +123,13 @@ class _$GetEmployeeStateImpl extends _GetEmployeeState {
         (other.runtimeType == runtimeType &&
             other is _$GetEmployeeStateImpl &&
             (identical(other.employees, employees) ||
-                other.employees == employees));
+                other.employees == employees) &&
+            (identical(other.isEmptyTextField, isEmptyTextField) ||
+                other.isEmptyTextField == isEmptyTextField));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, employees);
+  int get hashCode => Object.hash(runtimeType, employees, isEmptyTextField);
 
   @JsonKey(ignore: true)
   @override
@@ -124,12 +141,14 @@ class _$GetEmployeeStateImpl extends _GetEmployeeState {
 
 abstract class _GetEmployeeState extends GetEmployeeState {
   const factory _GetEmployeeState(
-          {required final Result<List<Employee>> employees}) =
-      _$GetEmployeeStateImpl;
+      {required final Result<List<Employee>> employees,
+      required final bool isEmptyTextField}) = _$GetEmployeeStateImpl;
   const _GetEmployeeState._() : super._();
 
   @override
   Result<List<Employee>> get employees;
+  @override
+  bool get isEmptyTextField;
   @override
   @JsonKey(ignore: true)
   _$$GetEmployeeStateImplCopyWith<_$GetEmployeeStateImpl> get copyWith =>
