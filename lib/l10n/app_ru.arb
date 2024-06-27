@@ -1,4 +1,14 @@
 {
   "textFieldPlaceholder": "Введите имя, тег, почту...",
-  "cancel": "Отмена"
+  "cancel": "Отмена",
+  "fullDate": "{value} года",
+  "@fullDate": {
+    "description": "Количество полных лет",
+    "placeholders": {
+      "value": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  }
 }

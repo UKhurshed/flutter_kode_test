@@ -1,6 +1,7 @@
 import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_kode_test/router/app_routes.dart';
 import 'package:flutter_kode_test/screens/employees/cubit/get_employee_cubit.dart';
 import 'package:flutter_kode_test/screens/employees/widgets/widgets.dart';
 import 'package:flutter_kode_test/utils/default_shimmer.dart';
@@ -56,7 +57,20 @@ class _EmployeesViewState extends State<_EmployeesView> {
                           shrinkWrap: true,
                           physics: const BouncingScrollPhysics(),
                           itemBuilder: (context, index) {
-                            return EmployeeItem(data: data[index]);
+                            return InkWell(
+                                onTap: () {
+                                  final item = data[index];
+                                  final fullName =
+                                      '${item.firstName} ${item.lastName}';
+                                  DetailEmployeeInfoRoute(
+                                          avatarUrl: item.avatarUrl,
+                                          fullName: fullName,
+                                          position: item.position,
+                                          birthday: item.birthday,
+                                          phone: item.phone)
+                                      .push(context);
+                                },
+                                child: EmployeeItem(data: data[index]));
                           },
                           separatorBuilder: (context, index) {
                             return const SizedBox(height: 4);
