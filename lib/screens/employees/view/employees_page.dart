@@ -120,16 +120,20 @@ class _EmployeeSectionShimmer extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         DecoratedBox(
-                            decoration: BoxDecoration(
-                                color: Colors.grey,
-                                borderRadius: BorderRadius.circular(50)),
-                            child: const SizedBox(height: 16, width: 144)),
+                          decoration: BoxDecoration(
+                            color: Colors.grey,
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: const SizedBox(height: 16, width: 144),
+                        ),
                         const SizedBox(height: 6),
                         DecoratedBox(
-                            decoration: BoxDecoration(
-                                color: Colors.grey,
-                                borderRadius: BorderRadius.circular(50)),
-                            child: const SizedBox(height: 12, width: 80)),
+                          decoration: BoxDecoration(
+                            color: Colors.grey,
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: const SizedBox(height: 12, width: 80),
+                        ),
                       ],
                     )
                   ],

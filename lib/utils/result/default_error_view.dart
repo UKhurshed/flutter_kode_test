@@ -16,11 +16,11 @@ class DefaultErrorView extends StatelessWidget {
 
     //TODO add localizable error message
     final error = switch (exception) {
-      SocketException() => UiError(
+      SocketException() => const UiError(
         title: "s.connectionErrorTitle",
         description: "s.connectionErrorDescription",
       ),
-      _ => UiError(
+      _ => const UiError(
         title: "s.genericErrorTitle",
         description: "s.genericErrorDescription",
       ),
